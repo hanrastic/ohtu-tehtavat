@@ -1,3 +1,1 @@
 # ohtu-tehtavat
-
-testi
