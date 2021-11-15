@@ -9,7 +9,6 @@ class Varasto:
         self._kirjanpito = kirjanpito
         self._saldot = {}
         self._alusta_tuotteet()
-        self.varasto = Varasto()
         self.pankki = Pankki()
 
     def hae_tuote(self, id):
@@ -46,3 +45,5 @@ class Varasto:
         self._saldot[Tuote(3, "Sierra Nevada Pale Ale", 5)] = 30
         self._saldot[Tuote(4, "Mikkeller not just another Wit", 7)] = 40
         self._saldot[Tuote(5, "Weihenstephaner Hefeweisse", 4)] = 15
+
+varasto = Varasto()

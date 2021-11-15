@@ -1,7 +1,7 @@
 from varasto import varasto as default_varasto
 from pankki import pankki as default_pankki
 from ostoskori import Ostoskori
-from viitegeneraattori import viiteneraattori as default_viitegeneraattori
+from viitegeneraattori import viitegeneraattori as default_viitegeneraattori
 
 
 class Kauppa:
