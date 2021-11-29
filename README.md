@@ -1,3 +1,3 @@
 # ohtu-tehtavat
-1
+1,2
 v2t10!!
