@@ -1,5 +1,6 @@
 from player import Player
 
+
 class And:
     def __init__(self, *matchers):
         self._matchers = matchers
@@ -59,5 +60,24 @@ class All:
     def __init__(self):
         pass
     def matches(self, player):
-        return player
+        return True
 
+class QueryBuilder():
+    def __init__(self, all = All()):
+        self._query = all
+    
+    def playsIn(self, team):
+        return QueryBuilder(And(self._query, PlaysIn(team)))
+    
+    def hasAtLeast(self, value, attr):
+        return QueryBuilder(And(self._query, HasAtLeast(value, attr)))
+
+    def hasFewerThan(self, value, attr):
+        return QueryBuilder(And(self._query, HasFewerThan(value, attr)))
+
+    def build(self):
+        return self._query
+
+    def oneOf(self, *queries):
+        return QueryBuilder(Or(*queries))
+        
